@@ -27,6 +27,7 @@
 	&__logo {
 		font-family: var(--raleway-font);
 		font-weight: var(--font-extra-bold);
+		font-size: var(--bigger-font-size);
 		&:hover {
 			text-shadow: -5px 0 8px rgba(62, 156, 220, 0.7);
 		}
