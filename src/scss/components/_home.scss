@@ -1,0 +1,51 @@
+/* ===== HOME ===== */
+.home {
+	padding: calc(var(--header-height) + 1.5rem) 0 5rem;
+	background-image: url('../img/home-img.jpg');
+	background-position: 5% 30%;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	&__container {
+		display: flex;
+		align-items: center;
+	}
+
+	&__data {
+		display: flex;
+		flex-direction: column;
+		row-gap: 3rem;
+		margin: 2rem 0;
+	}
+
+	&__title {
+		text-transform: uppercase;
+		font-family: var(--lato-font);
+		font-weight: var(--font-bold);
+		font-size: var(--h1-font-size);
+		word-wrap: break-word;
+	}
+
+	&__caption {
+		font-weight: var(--font-bold);
+		margin-bottom: var(--mb-0-5);
+		font-size: var(--bigger-font-size);
+	}
+	&__item {
+		display: flex;
+		align-items: center;
+		margin-bottom: 5px;
+		word-wrap: break-word;
+		font-size: var(--bigger-font-size);
+	}
+
+	.home__icon {
+		padding: 0 .5rem;
+	}
+
+	&__btns {
+		display: flex;
+		flex-direction: column;
+		row-gap: 1rem;
+	}
+}
