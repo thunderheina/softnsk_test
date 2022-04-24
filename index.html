@@ -78,16 +78,142 @@
 					</div>
 
 					<div class="home__btns">
-						<button class="button button-active">Заказать</button>
-						<button class="button button-passive">Подробнее</button>
+						<button class="home__button button button-active">Заказать</button>
+						<button class="home__button button button-passive">Подробнее</button>
 					</div>
 				</div>
 			</div>
 		</section>
 
 		<!-- ===== ORDER ===== -->
-		<section class="order" id="order"></section>
+		<section class="order section" id="order">
+			<div class="order__container container grid">
+				<div class="order__header">
+					<h2 class="order__title">Оформление <span class="accent-text">Заказа</span></h2>
+					<p class="order__subtitle">Перед заполнением формы ознакомьтесь с нашей схемой работы!</p>
+				</div>
 
+				<div class="order__process grid">
+					<div class="order__item">
+						<div class="order__icon">
+							<img src="src/img/loupe.svg" class="order__img" alt="search">
+						</div>
+						<p class="order__description">Lorem ipsum dolor sit amet</p>
+
+						<div class="order__decor decor">
+							<span class="decor__item"></span>
+							<span class="decor__item"></span>
+							<span class="decor__item"></span>
+							<span class="decor__item"></span>
+							<span class="decor__item"></span>
+						</div>
+					</div>
+
+					<div class="order__item">
+						<div class="order__icon">
+							<img src="src/img/procent.svg" class="order__img" alt="procent">
+						</div>
+						<p class="order__description">Сonsecteturadipiscing elit</p>
+
+						<div class="order__decor decor">
+							<span class="decor__item"></span>
+							<span class="decor__item"></span>
+							<span class="decor__item"></span>
+							<span class="decor__item"></span>
+							<span class="decor__item"></span>
+						</div>
+					</div>
+
+					<div class="order__item">
+						<div class="order__icon">
+							<img src="src/img/doc.svg" class="order__img" alt="document">
+						</div>
+						<p class="order__description">Sed do eiusmod tempor</p>
+
+						<div class="order__decor decor">
+							<span class="decor__item"></span>
+							<span class="decor__item"></span>
+							<span class="decor__item"></span>
+							<span class="decor__item"></span>
+							<span class="decor__item"></span>
+						</div>
+					</div>
+
+					<div class="order__item">
+						<div class="order__icon">
+							<img src="src/img/envelope.svg" class="order__img" alt="envelope">
+						</div>
+						<p class="order__description">Esse cillum dolore eu fugiat</p>
+
+						<div class="order__decor decor">
+							<span class="decor__item"></span>
+							<span class="decor__item"></span>
+							<span class="decor__item"></span>
+							<span class="decor__item"></span>
+							<span class="decor__item"></span>
+						</div>
+					</div>
+
+					<div class="order__item">
+						<div class="order__icon">
+							<img src="src/img/money.svg" class="order__img" alt="pay">
+						</div>
+						<p class="order__description">Excepteur sint occaecat cupidatat non proident</p>
+					</div>
+				</div>
+
+				<div class="order__form">
+					<form action="" class="form" id="order-form" name="order-form" method="post">
+						<div class="form__inputs grid">
+							<div class="form__input form__dropdown-wrapper">
+								<span>Выберите тип системы</span>
+								<i class="dropdown__icon ri-arrow-down-s-line"></i>
+								<ul class="dropdown__list">
+									<li class="dropdown__option">Sed ut perspiciatis</li>
+									<li class="dropdown__option">Nemo enim ipsam</li>
+									<li class="dropdown__option">Et harum quidem</li>
+									<li class="dropdown__option">Temporibus autem</li>
+									<li class="dropdown__option">Itaque earum rerum</li>
+									<li class="dropdown__option">Sed ut perspiciatis</li>
+									<li class="dropdown__option">Nemo enim ipsam</li>
+									<li class="dropdown__option">Et harum quidem</li>
+									<li class="dropdown__option">Temporibus autem</li>
+									<li class="dropdown__option">Itaque earum rerum</li>
+								</ul>
+							</div>
+
+
+							<input type="email" class="form__input" placeholder="Ваш e-mail" name="order__form-email"
+								id="order__form-email">
+							<input type="text" class="form__input" placeholder="Ваше имя" name="order__form-name"
+								id="order__form-name">
+						</div>
+
+						<div class="form__info grid">
+							<div class="form__range range">
+								<label class="range__label" for="slider">Sed ut perspiciatis, unde omnis iste natus</label>
+								<p class="range__data"><span class="range__result">75</span>%</p>
+								<input class="range__slider" id="order__form-range" name="order__form-range" type="range"
+									min="1" max="100" value="75">
+							</div>
+
+							<div class="form__file file">
+								<input class="file__input" id="order__form-file" type="file" name="order__form-file"
+									accept=".txt, .pdf, .jpg, .png">
+								<div class="file__btn">
+									<img class="file__icon file__icon-black" src="src/img/btn-file.png" alt="">
+									<img class="file__icon file__icon-white" src="src/img/btn-file-white.png" alt="">
+									<p class="file__description">Прикрепить файл</p>
+								</div>
+							</div>
+						</div>
+
+						<button type="submit" class="form__button button button-active" id="order__form-submit"
+							name="order__form-submit">Отправить</button>
+					</form>
+				</div>
+			</div>
+		</section>
 	</main>
 
 	<!-- ===== FOOTER ===== -->
