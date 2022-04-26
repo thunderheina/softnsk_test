@@ -1,0 +1,35 @@
+/* ===== LAYOUT ===== */
+.section {
+	padding: 5.5rem 0 2rem;
+
+	@include breakpoint(xl) {
+		padding: 6.438rem 0 9.375rem;
+	}
+}
+
+.container {
+	max-width: 1172px;
+	margin-left: $mb-1-5;
+	margin-right: $mb-1-5;
+
+	@include breakpoint(sm) {
+		margin-left: $mb-1;
+		margin-right: $mb-1;
+	}
+	@include breakpoint(xl) {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.grid {
+	display: grid;
+}
+
+.accent-text {
+	color: $accent-color;
+}
+
+.uppercase-text {
+	text-transform: uppercase;
+}
