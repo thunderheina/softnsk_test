@@ -1,0 +1,86 @@
+/* ===== GOOGLE FONTS ===== */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+$header-height: 5rem;
+
+$accent-color: #3E9CDC;
+$white-color: #ffffff;
+$input-black: #272733;
+$dropdown-dark: #3D4050;
+$black-color: #000000;
+$btn-black: #2A2B30;
+
+$mb-0-5: 0.5rem;
+$mb-1: 1rem;
+$mb-1-5: 1.5rem;
+$mb-2-5: 2.5rem;
+
+$font-semi-bold: 600;
+$font-bold: 700;
+$font-extra-bold: 800;
+
+$z-fixed: 100;
+$z-tool: 10;
+
+:root {
+	/* ===== Fonts and sizes ===== */
+	--raleway-font: 'Raleway', sans-serif;;
+	--lato-font: 'Lato', sans-serif;
+
+	--h1-font-size: 2rem;
+	--h2-font-size: 1.5rem;
+	--bigger-font-size: 1.25rem;
+	--big-font-size: 1rem;
+	--normal-font-size: 0.9rem;
+	--small-font-size: 0.8rem;
+	--smaller-font-size: 0.7rem;
+
+	//Responsive
+	@media screen and (max-width: 520px) {
+		--h1-font-size: 1.5rem;
+		--h2-font-size: 1.25rem;
+		--bigger-font-size: 1rem;
+		--big-font-size: 0.9rem;
+		--normal-font-size: 0.8rem;
+		--small-font-size: 0.7rem;
+		--smaller-font-size: 0.6rem;
+	}
+
+	@media screen and (min-width: 968px) {
+		--h1-font-size: 3rem;
+		--h2-font-size: 2.25rem;
+		--bigger-font-size: 1.125rem;
+		--big-font-size: 1.25rem;
+		--normal-font-size: 1rem;
+		--small-font-size: 0.875rem;
+		--smaller-font-size: 0.813rem;
+	}
+}
+
+@mixin breakpoint($point) {
+	@if $point == xs {
+		//320px
+		@media (min-width: 300px) {
+			@content;
+		}
+	} @else if $point == sm {
+		//576px
+		@media (min-width: 520px) {
+			@content;
+		}
+	} @else if $point == md {
+		//768px
+		@media (min-width: 767px) {
+			@content;
+		}
+	} @else if $point == lg {
+		@media (min-width: 992px) {
+			@content;
+		}
+	} @else if $point == xl {
+		@media (min-width: 1280px) {
+			@content;
+		}
+	}
+}
