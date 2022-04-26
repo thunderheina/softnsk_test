@@ -5,7 +5,7 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: var(--z-fixed);
+	z-index: $z-fixed;
 	transition: 0.4s;
 	-webkit-transition: 0.4s;
 	-moz-transition: 0.4s;
@@ -15,21 +15,26 @@
 
 /* ===== NAV ===== */
 .nav {
-	height: var(--header-height);
+	height: $header-height;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 
+	@include breakpoint(md) {
+		height: calc(#{$header-height} + 1.5rem);
+		column-gap: 3rem;
+	}
+
 	&__logo, &__toggle, &__close {
-		color: var(--white-color);
+		color: $white-color;
 	}
 
 	&__logo {
 		font-family: var(--raleway-font);
-		font-weight: var(--font-extra-bold);
-		font-size: var(--bigger-font-size);
+		font-weight: $font-extra-bold;
+		font-size: var(--big-font-size);
 		&:hover {
-			text-shadow: -5px 0 8px rgba(62, 156, 220, 0.7);
+			text-shadow: -5px 0 8px rgba($color: $accent-color, $alpha: 0.7);
 		}
 	}
 
@@ -37,6 +42,10 @@
 		display: inline-flex;
 		font-size: 1.25rem;
 		cursor: pointer;
+		
+		@include breakpoint(md) {
+			display: none;
+		}
 	}
 
 	&__menu {
@@ -47,14 +56,18 @@
 			height: 100%;
 			top: 0;
 			right: -100%;
-			box-shadow: -2px 0 8px rgba(62, 156, 220, 0.5);
+			box-shadow: -2px 0 8px rgba($color: $accent-color, $alpha: 0.5);
 			padding: 4rem 0 0 3rem;
-			z-index: var(--z-fixed);
+			z-index: $z-fixed;
 			transition: 0.3s;
 			-webkit-transition: 0.3s;
 			-moz-transition: 0.3s;
 			-ms-transition: 0.3s;
 			-o-transition: 0.3s;
+
+			@include breakpoint(md) {
+				margin-left: auto;
+			}
 		}
 	}
 	&__close {
@@ -63,21 +76,33 @@
 		top: 1rem;
 		right: 1.25rem;
 		cursor: pointer;
+
+		@include breakpoint(md) {
+			display: none;
+		}
 	}
 	&__list {
 		display: flex;
 		flex-direction: column;
 		row-gap: 1.25rem;
+
+		@include breakpoint(md) {
+			flex-direction: row;
+			column-gap: 3rem;
+		}
+		@include breakpoint(xl) {
+			column-gap: 3.75rem;
+		}
 	}
 	&__link {
 		text-transform: uppercase;
-		color: var(--white-color);
-		font-weight: var(--font-semi-bold);
+		color: $white-color;
+		font-weight: $font-semi-bold;
 		font-size: var(--smaller-font-size);
 		line-height: 16px;
 
 		&:hover {
-			color: var(--accent-color);
+			color: $accent-color;
 		}
 	}
 }
