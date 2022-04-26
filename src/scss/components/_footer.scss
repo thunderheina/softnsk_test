@@ -1,0 +1,143 @@
+.footer {
+	background-color: $dropdown-dark;
+	padding: 1.875rem 0;
+	font-size: var(--smaller-font-size);
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		row-gap: 2rem;
+
+		@include breakpoint(md) {
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-around;
+		}
+		@include breakpoint(lg) {
+			justify-content: space-between;
+		}
+	}
+
+	&__copyright {
+		align-self: center;
+		color: $white-color;
+	}
+
+	&__payment {
+		position: relative;
+		display: flex;
+		align-self: center;
+		flex-direction: column;
+		row-gap: 1rem;
+
+		@include breakpoint(lg) {
+			flex-direction: row;
+			column-gap: 1rem;
+		}
+		@include breakpoint(xl) {
+			column-gap: 2.5rem;
+		}
+
+		&::before, &::after {
+			content: '';
+			position: absolute;
+			display: block;
+			background-color: #C3C3C3;
+
+			@include breakpoint(xs) {
+				width: 170%;
+				height: 1px;
+				left: -2rem;
+			}
+			@include breakpoint(md) {
+				width: 1px;
+				height: 50%;
+				top: 25%;
+				left: initial;
+			}
+			@include breakpoint(lg) {
+				top: initial;
+				height: 100%;
+			}
+		}
+
+		&::before {
+			@include breakpoint(xs) {
+				top: -1rem;
+			}
+			@include breakpoint(md) {
+				top: 25%;
+				left: -70%;
+			}
+			@include breakpoint(lg) {
+				top: initial;
+				left: -1rem;
+			}
+			@include breakpoint(xl) {
+				left: -12%;
+			}
+		}
+
+		&::after {
+			@include breakpoint(xs) {
+				bottom: -1rem;
+			}
+			@include breakpoint(md) {
+				bottom: initial;
+				right: -70%;
+			}
+			@include breakpoint(lg) {
+				right: -1rem;
+			}
+			@include breakpoint(xl) {
+				bottom: initial;
+				right: -13%;
+			}
+		}
+
+		&-item {
+			display: flex;
+			align-items: center;
+		}
+		&-description {
+			color: #c4c4c4;
+			&:hover {
+				color: $accent-color;
+			}
+		}
+	}
+
+	&__icon {
+		margin-right: 8px;
+
+		@include breakpoint(xl) {
+			margin-right: 12px;
+		}
+	}
+	&__socials {
+		display: flex;
+		align-self: center;
+		flex-direction: column;
+		row-gap: 1rem;
+
+		@include breakpoint(lg) {
+			flex-direction: row;
+			column-gap: 1rem;
+		}
+		@include breakpoint(xl) {
+			column-gap: 2.5rem;
+		}
+		
+		&-link {
+			color: $white-color;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			&:hover{
+				color: $accent-color;
+			}
+		}
+	}
+}
