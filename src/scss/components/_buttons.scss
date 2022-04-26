@@ -1,0 +1,37 @@
+/* ===== BUTTONS ===== */
+.button {
+	text-transform: uppercase;
+	padding: 1rem 2rem;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+	transition: 0.4s;
+	-webkit-transition: 0.4s;
+	-moz-transition: 0.4s;
+	-ms-transition: 0.4s;
+	-o-transition: 0.4s;
+
+	&-active{
+		background-color: $accent-color;
+		color: $white-color;
+		border: 1px solid $white-color;
+
+		&:hover{
+			background-color: $white-color;
+			color: $accent-color;
+		}
+	}
+
+	&-passive {
+		background-color: $white-color;
+		color: $btn-black;
+		border: 1px solid #6F6D7B;
+
+		&:hover {
+			background-color: #6F6D7B;
+			color: $white-color;
+		}
+	}
+}
