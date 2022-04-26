@@ -1,10 +1,18 @@
 /* ===== HOME ===== */
 .home {
-	padding: calc(var(--header-height) + 1.5rem) 0 5rem;
+	padding: calc(#{$header-height} + 1.5rem) 0 5rem;
 	background-image: url('../img/home-img.jpg');
 	background-position: 5% 30%;
 	background-repeat: no-repeat;
 	background-size: cover;
+
+	@include breakpoint(sm) {
+		background-position: 20% 50%;
+	}
+	@include breakpoint(md) {
+		padding: calc(#{$header-height} + 4rem)  0 5rem;
+		background-position: 5% 10%;
+	}
 
 	&__container {
 		display: flex;
@@ -16,30 +24,36 @@
 		flex-direction: column;
 		row-gap: 3rem;
 		margin: 2rem 0;
+
+		@include breakpoint(lg) {
+			margin: 4rem 0;
+			row-gap: 4rem;
+		}
+		@include breakpoint(xl) {
+			row-gap: 5rem;
+		}
 	}
 
 	&__title {
 		text-transform: uppercase;
 		font-family: var(--lato-font);
-		font-weight: var(--font-bold);
+		font-weight: $font-bold;
 		font-size: var(--h1-font-size);
-		word-wrap: break-word;
 	}
 
 	&__caption {
-		font-weight: var(--font-bold);
-		margin-bottom: var(--mb-0-5);
-		font-size: var(--bigger-font-size);
+		font-weight: $font-bold;
+		margin-bottom: $mb-0-5;
+		font-size: var(--big-font-size);
 	}
 	&__item {
 		display: flex;
 		align-items: center;
 		margin-bottom: 5px;
-		word-wrap: break-word;
-		font-size: var(--bigger-font-size);
+		font-size: var(--big-font-size);
 	}
 
-	.home__icon {
+	&__icon {
 		padding: 0 .5rem;
 	}
 
@@ -47,5 +61,15 @@
 		display: flex;
 		flex-direction: column;
 		row-gap: 1rem;
+
+		@include breakpoint(sm) {
+			flex-direction: row;
+			column-gap: 2rem;
+		}
+	}
+
+	&__button {
+		width: 180px;
+		font-size: var(--smaller-font-size);
 	}
 }
